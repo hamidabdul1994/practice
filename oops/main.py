@@ -1,3 +1,7 @@
+# Author Hamid Raza Noori(noorihamid1994@gmail.com) 
+# Desc Sample OOPS program
+# Date 07 Nov 2020
+
 class Employee:
     def __init__(self, firstName, lastName):
         self.firstName = firstName

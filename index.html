@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Javascript Tutorial</title>
+        <script>
+            var add = function (a,b){
+                // console.log(a,b);
+                return a+b;
+            }
+            var num1 = 1;
+            function buttonClick(){
+                var sum = add(num1,2)
+                document.getElementById("custom").innerHTML = sum
+
+                // console.log(sum);
+                num1++;
+            }
+
+
+        </script>
+    </head>
+    <body>
+        <button onclick="buttonClick()">Click</button>
+        <div id="custom">No value</div>
+    </body>
+</html>

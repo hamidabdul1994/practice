@@ -1,0 +1,36 @@
+
+<html>
+    <head>
+        <title>Javascript Tutorial</title>
+        <script>
+            // JS is object based programming
+            var fn_fullName = function(){
+                    //this is reference of object i.e. pointer
+                    // console.log(window);
+                    return this.firstName + " " + this.lastName
+            }
+            var firstName = "Hamid"
+            var object1  = {
+                firstName :"Aroh",
+                lastName:"Yadav",
+                fullName : fn_fullName
+            }
+
+            var object2  = {
+                firstName :"Ahad",
+                lastName:"siddiqui",
+                fullName : fn_fullName
+            }
+
+
+            console.log(object1.fullName());
+            console.log(object2.fullName());
+
+        </script>
+    </head>
+    <body>
+        <button >Click</button>
+        <div id="custom">No value</div>
+    </body>
+</html>
+       

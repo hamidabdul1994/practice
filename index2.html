@@ -1,0 +1,53 @@
+
+<html>
+    <head>
+        <title>Javascript Tutorial</title>
+        <script>
+            // JS is object based programming
+            
+            var obj ;
+            // var num;
+            function MyLocalStorage(name){
+                this.name = name//"views"
+            }
+            
+            MyLocalStorage.prototype.getData = function(){
+                return Number(localStorage.getItem(this.name))
+            }
+
+            MyLocalStorage.prototype.saveData = function(value){
+                localStorage.setItem(this.name,value)
+                return value
+            }
+
+            function init(){
+                obj = new MyLocalStorage("views");
+                writeValue()
+            }
+
+            function assignValue(){
+                let num = obj.getData();
+                num++;
+                obj.saveData(num)
+                writeValue()
+            }
+
+            function writeValue(){
+                let num = obj.getData();
+                if (!num) {
+                    num = 0;
+                }
+                document.getElementById("custom").innerHTML = num
+            }
+
+            (window).onload = function(){
+                init()
+            }
+        </script>
+    </head>
+    <body>
+        <button onclick="assignValue()">Click</button>
+        <div id="custom">No value</div>
+    </body>
+</html>
+       
